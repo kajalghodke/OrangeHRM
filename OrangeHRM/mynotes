@@ -1,0 +1,163 @@
+//	Actions a=new Actions(driver);
+
+		//a.sendKeys(fname,Keys.BACK_SPACE);
+		//	a.perform();
+	// action class refere and create backsapace 	
+	
+		//fname.clear();
+		//fname.sendKeys("Kajal");
+		//driver.findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//following::div[@class='oxd-input-group__label-wrapper']/label[text()='SSN Number']//following::input[1]")).clear();
+		/*
+		fname.sendKeys(Keys.CONTROL,"a");
+		fname.sendKeys(Keys.DELETE);
+		
+		fname.sendKeys("Random");*/
+	/*
+		//for middle name
+		By midname=By.xpath("//input[@name='middleName']");
+		
+		WebElement mname=driver.findElement(midname);
+		//lname.click();
+		mname.sendKeys("R1");
+		
+		//Thread.sleep(5000);
+		By lastname=By.xpath("//input[@name='lastName']");
+
+		WebElement lname=driver.findElement(lastname);
+		//lname.click();
+		//fname.clear();
+	//Actions a=new Actions(driver);
+
+		lname.sendKeys(Keys.CONTROL,"a");
+		lname.sendKeys(Keys.DELETE);
+		
+		lname.sendKeys("Randomlast");
+
+		*/
+		//fname.clear();
+	//Actions a=new Actions(driver);
+		/*
+		 * builder.moveToElement(txtUsername).
+        		click().keyDown(txtUsername, Keys.SHIFT).sendKeys(txtUsername, "Kajal").
+        		keyUp(txtUsername,Keys.SHIFT).doubleClick(txtUsername).contextClick().build();*/
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		public void passmandatedata() throws InterruptedException  {
+		
+		Actions act = new Actions(driver);
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//first name
+		By firstname=By.xpath("//input[@name='firstName']");
+		//div[@class='oxd-input-group oxd-input-field-bottom-space']//following::div[2]/input[@name='firstName']
+		WebElement fname=driver.findElement(firstname);
+		fname.click();
+		
+			act.moveToElement(fname).click().sendKeys(fname, Keys.CONTROL,"a",Keys.BACK_SPACE)
+			.build().perform();
+			fname.clear();
+	fname.sendKeys("Random1");
+
+		//for middle name
+		By midname=By.xpath("//input[@name='middleName']");
+		
+		WebElement mname=driver.findElement(midname);
+		mname.click();
+		act.moveToElement(mname).click().sendKeys(mname, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		mname.sendKeys("Ra1");
+		
+		//Thread.sleep(5000);
+		By lastname=By.xpath("//input[@name='lastName']");
+
+		WebElement lname=driver.findElement(lastname);
+		lname.click();
+		act.moveToElement(lname).click().sendKeys(lname, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		
+		lname.sendKeys("Randomlast");
+
+		// for nick name
+		By nikname= By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//following::label[text()='Nickname']//following::input[1]");
+		WebElement nickname=driver.findElement(nikname);
+		nickname.click();
+		act.moveToElement(nickname).click().sendKeys(nickname, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		
+		nickname.sendKeys("RandomNick");
+
+
+		
+		// for employee id
+		By eid=By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//following::label[text()='Employee Id']//following::input[1]");
+		WebElement empid=driver.findElement(eid);
+		empid.click();
+act.moveToElement(empid).click().sendKeys(empid, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		
+		empid.sendKeys("RandomID");
+
+		
+		//for other id
+		By oid=By.xpath("//label[text()='Other Id']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input");
+		WebElement otherid =driver.findElement(oid);
+		otherid.click();
+		act.moveToElement(otherid).click().sendKeys(otherid, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		otherid.sendKeys("Randoma2314143");
+		
+		
+
+		
+		// for License Expiry date
+		By licExd=By.xpath("//label[text()='License Expiry Date']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input");
+		
+		WebElement licExpdate =driver.findElement(licExd);
+		licExpdate.click();
+		act.moveToElement(licExpdate).click().sendKeys(licExpdate, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		licExpdate.sendKeys("2035-05-12");
+		
+		
+		// for Driver's License Number date
+		By drivlino=By.xpath("//label[text()=\"Driver's License Number\"]//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input");
+		//label[text()="Driver's License Number"]//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input
+		WebElement drivlicno =driver.findElement(drivlino);
+		drivlicno.click();
+		act.moveToElement(drivlicno).click().sendKeys(drivlicno, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+		drivlicno.sendKeys("Drilicnom2314143");
+		
+		// for ssn no
+		
+	
+		By ssn =By.xpath("//label[text()='SSN Number']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input");
+		//div[@class='oxd-input-group oxd-input-field-bottom-space']//following::div[@class='oxd-input-group__label-wrapper']/label[text()='SSN Number']//following::input[1]
+		WebElement ssno =driver.findElement(ssn);
+		ssno.click();
+		act.moveToElement(ssno).click().sendKeys(ssno, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+
+		ssno.sendKeys("TestFirstName");
+		
+		
+		// for sin no
+		By sin =By.xpath("//label[text()='SIN Number']//ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input");
+		WebElement sinno =driver.findElement(sin);
+		sinno.click();
+		act.moveToElement(sinno).click().sendKeys(sinno, Keys.CONTROL,"a",Keys.BACK_SPACE).build().perform();
+
+		sinno.sendKeys("TestFirstName");
+		
+		
+		//
+		
+		
+		
+		// for 
+		
+		//driver.findElement(By.name("lastName")).sendKeys("TestLAstname");
+		//Thread.sleep(5000);
+		//driver.findElement(By.xpath("//button[@type = 'submit']")).click();
+		
+	}
+	
